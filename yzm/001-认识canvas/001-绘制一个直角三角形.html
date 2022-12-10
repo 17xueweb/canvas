@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 需求：绘制一个直角三角形。
+        window.onload = function() {
+            // 获取canvas对象
+            var oCanvas = document.getElementById("canvas");
+            // 检测浏览器是否支持canvas，支持就返回true
+            if(oCanvas.getContext) {
+                // 得到一个2d上下文绘图的环境
+                var oContext = oCanvas.getContext("2d")
+                // 开始绘制图形了
+                // 定义一个线条的起始点
+                oContext.moveTo(50, 100);
+                // 定义一个线条的结束点
+                oContext.lineTo(150, 50);
+                oContext.lineTo(150, 100);
+                oContext.lineTo(50, 100);
+                // 把起始点和结束点组成一条路径，并着上色，默认线条的颜色是黑色的
+                oContext.stroke();
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+</html>
