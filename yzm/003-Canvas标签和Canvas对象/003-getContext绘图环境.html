@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            width: 250px;
+            height: 250px;
+            border: 1px solid purple;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            // 获取canvas对象
+            var oCanvas = document.getElementById("canvas");
+            // 需要得到一个2D绘图上下文环境对象的引用
+            var oContext = oCanvas.getContext("2d")
+            for(var prop in oContext) {
+                document.write(prop + "<br/>")
+            }
+        }
+    </script>
+    <canvas id="canvas"></canvas>
+</body>
+</html>
