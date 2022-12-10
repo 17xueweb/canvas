@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            // 获取canvas对象
+            var oCanvas = document.getElementById("canvas")
+            if(oCanvas.getContext) {
+                // 获取2d绘图上下文环境
+                oContext = oCanvas.getContext("2d");
+                // 填充，本节只讲颜色填充
+                // 更改填充的颜色
+                // oContext.fillStyle = 'rgb(255, 0, 0)'
+                // rgba表示方法透明
+                oContext.fillStyle = 'rgba(255, 0, 0, 0.3)'
+                oContext.fillRect(20, 20, 50, 50)
+
+            }
+        }
+    </script>
+    <canvas id="canvas"></canvas>
+</body>
+</html>

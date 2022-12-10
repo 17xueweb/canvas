@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>描边</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            // 获取canvas元素对象
+            var oCanvas = document.getElementById("canvas")
+            if(oCanvas.getContext) {
+                // 浏览器支持canvas
+                // 获取2d绘图上下文环境
+                var oContext = oCanvas.getContext("2d");
+                // 描边
+                // 颜色的描边
+
+                /**
+                 * 颜色的表示方式：
+                 * 英文单词
+                 * 16进制 0~9 A~F #
+                 * rgb 0~255之间
+                 * rgba：0~255 透明度0~1 r红色 g绿色 b蓝色
+                 **/
+                // (1)英文单词表示 
+                // oContext.strokeStyle = 'red'
+                // (2) 16进制
+                // oContext.strokeStyle = '#00ff00'
+                // (3)rgb表示 
+                // oContext.strokeStyle = 'rgb(0, 0, 255)'
+                // (4) rgba表示 透明度
+                oContext.strokeStyle = 'rgba(0, 0, 0, 0.5)'
+                
+                // 画一个矩形
+                // oContext.strokeRect(x轴, y轴, 宽度, 宽度)
+                oContext.strokeRect(10, 10, 50, 50)
+
+            }else {
+                // 浏览器不支持
+                console.log('浏览器不支持');
+            }
+        }
+    </script>
+    <canvas id="canvas">你的浏览器不支持canvas</canvas>
+</body>
+</html>
