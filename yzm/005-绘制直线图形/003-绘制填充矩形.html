@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px dashed gray;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            margin-left: -125px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            // 需求：绘制填充矩形 fillRect(x, y, w, h)
+            // 获取canvas元素对象
+            var oCanvas = document.getElementById("canvas");
+            if(oCanvas.getContext) {
+                // 获取2d绘图上下文环境
+                var oContext = oCanvas.getContext("2d")
+                // 更改填充颜色
+                oContext.fillStyle = 'rgba(255, 0, 0, 0.3)'
+                // 绘制填充矩形
+                oContext.fillRect(30, 30, 50, 60)
+            }
+            
+
+        }
+        
+    </script>
+    <canvas id="canvas" width="250" height="250"></canvas>
+</body>
+</html>
