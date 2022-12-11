@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px dashed gray;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            // 获取canvas对象
+            var oCanvas = document.getElementById("canvas");
+            if(oCanvas.getContext) {
+                // 获取2d绘图上下文环境
+                var oContext = oCanvas.getContext("2d");
+                // oContext.arc(50, 50, 50, 0, Math.PI*2, true) // 逆时针绘制
+                // oContext.arc(50, 50, 50, 0, Math.PI*(1/2), true); // 逆时针绘制1/2PI
+                oContext.arc(50, 50, 50, 0, Math.PI*(1/2)); // 顺时针绘制1/2PI
+                oContext.fill()
+            }
+        }
+    </script>
+    <canvas id="canvas" width="250" height="250"></canvas>
+</body>
+</html>

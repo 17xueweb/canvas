@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px dashed gray;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            var oCanvas = document.getElementById("canvas");
+            if (oCanvas.getContext) {
+                var oContext = oCanvas.getContext("2d");
+                // 开始绘制
+                oContext.beginPath();
+                oContext.arc(50, 50, 50, 0, Math.PI * 2);
+                // 结束路径
+                oContext.closePath();
+                //绘制描边圆
+                oContext.stroke();
+
+                oContext.beginPath();
+                oContext.arc(100, 100, 30, 0, Math.PI * 2);
+                oContext.fillStyle = 'purple';
+                // 结束路径
+                oContext.closePath();
+                oContext.fill();
+
+            }
+        }
+    </script>
+    <canvas id="canvas" width="250" height="250"></canvas>
+</body>
+
+</html>
